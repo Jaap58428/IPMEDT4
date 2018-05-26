@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   /* border: 0; */
   font-family: sans-serif;
+  overflow: hidden;
 }
 
 .background-image {
@@ -13,9 +14,10 @@ html, body {
   bottom: 0;
   height: 100vh;
   width: 100vw;
-  filter:grayscale(30%) blur(2px);
+  filter:grayscale(30%) blur(2px) brightness(0%);
   z-index: -10;
   overflow: hidden;
+  transition: all 1s;
 }
 
 .background-image video {

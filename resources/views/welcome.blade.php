@@ -13,7 +13,7 @@
       <link rel="stylesheet" href="/css/landing.css">
   </head>
   <body>
-    <div class="background-image">
+    <div class="background-image" id="background">
       {{-- Old background image --}}
       {{-- <img src="/img/splash-bg.jpg" alt="background of tall grass"> --}}
       <video src="/vid/splash-bg.mp4" autoplay loop muted>
@@ -37,9 +37,10 @@
 
   <script type="text/javascript">
     window.onload = function () {
+      document.getElementById('background').style.filter = "grayscale(30%) blur(2px) brightness(100%)";
       setTimeout(function () {
         document.getElementById('splash').classList.add('slide-in-top');
-      }, 300);
+      }, 500);
 
       document.getElementById('startBtn').addEventListener("click", startTest);
 
